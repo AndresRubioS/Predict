@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.predict.databinding.ActivityMainBinding
+import com.example.predict.ui.NavBar.BottomNavigationActivity
 import com.example.predict.ui.register_activity
 
 class LoginActivity : AppCompatActivity() {
@@ -16,6 +17,16 @@ class LoginActivity : AppCompatActivity() {
         setContentView(view)
 
         pantallaRegistro()
+        login()
+
+    }
+
+    private fun login() {
+        binding.button.setOnClickListener {
+            val intent = Intent(this, BottomNavigationActivity::class.java)
+            startActivity(intent)
+
+        }
 
     }
 
