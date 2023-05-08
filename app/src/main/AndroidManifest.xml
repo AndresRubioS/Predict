@@ -12,10 +12,10 @@
         android:theme="@style/Theme.Predict"
         tools:targetApi="31">
         <activity
-            android:name=".register_activity"
+            android:name=".ui.register_activity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.Login.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

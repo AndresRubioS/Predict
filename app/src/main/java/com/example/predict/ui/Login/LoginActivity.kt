@@ -1,11 +1,12 @@
-package com.example.predict
+package com.example.predict.ui.Login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.predict.databinding.ActivityMainBinding
+import com.example.predict.ui.register_activity
 
-class MainActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
