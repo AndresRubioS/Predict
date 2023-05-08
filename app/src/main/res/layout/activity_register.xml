@@ -6,14 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".register_activity"
     android:background="#005c83">
+
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button">
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -26,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="110dp"
+                android:layout_marginTop="70dp"
                 app:srcCompat="@drawable/predict_logo" />
 
             <ImageView
@@ -42,30 +44,31 @@
                 android:layout_gravity="center"
 
                 android:orientation="vertical">
+
                 <EditText
                     android:id="@+id/et_name"
                     android:layout_width="230dp"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:layout_marginTop="20dp"
                     android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:ems="10"
                     android:hint="Name"
                     android:inputType="textPersonName"
-                    tools:ignore="NotSibling"
                     android:textColor="@color/edittext"
-                    android:textColorHint="@color/edittext"/>
+                    android:textColorHint="@color/edittext"
+                    tools:ignore="NotSibling" />
 
                 <EditText
                     android:id="@+id/et_password"
                     android:layout_width="230dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:ems="10"
                     android:layout_marginTop="10dp"
-                    android:inputType="textPassword"
+                    android:ems="10"
                     android:hint="Pasword"
+                    android:inputType="textPassword"
                     android:textColor="@color/edittext"
-                    android:textColorHint="@color/edittext"/>
+                    android:textColorHint="@color/edittext" />
 
 
                 <EditText
@@ -73,61 +76,63 @@
                     android:layout_width="230dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:ems="10"
                     android:layout_marginTop="10dp"
-                    android:inputType="date"
+                    android:ems="10"
                     android:hint="Fecha de nacimiento"
+                    android:inputType="date"
                     android:textColor="@color/edittext"
-                    android:textColorHint="@color/edittext"/>
+                    android:textColorHint="@color/edittext" />
 
                 <EditText
                     android:id="@+id/editTextTextEmailAddress"
                     android:layout_width="230dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:ems="10"
                     android:layout_marginTop="10dp"
-                    android:inputType="textEmailAddress"
+                    android:ems="10"
                     android:hint="E-mail"
+                    android:inputType="textEmailAddress"
                     android:textColor="@color/edittext"
-                    android:textColorHint="@color/edittext"/>
+                    android:textColorHint="@color/edittext" />
 
                 <EditText
                     android:id="@+id/editTextTextPersonName"
                     android:layout_width="230dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:ems="10"
                     android:layout_marginTop="10dp"
+                    android:ems="10"
                     android:hint="DNI"
                     android:textColor="@color/edittext"
-                    android:textColorHint="@color/edittext"/>
+                    android:textColorHint="@color/edittext" />
 
                 <CheckBox
                     android:id="@+id/checkBox"
                     android:layout_width="230dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
                     android:ems="10"
-                    android:layout_marginTop="10dp"
                     android:text="Aceptar terminos y condiciones"
-                    android:textColor="@color/white"/>
-
-                <Button
-                    android:id="@+id/button"
-                    android:layout_width="230dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_gravity="center"
-                    android:backgroundTint="#FF5722"
-                    android:text="Registrarse" />
-
+                    android:textColor="@color/white" />
 
 
             </LinearLayout>
 
         </LinearLayout>
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="#FF5722"
+        android:text="Registrarse"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
