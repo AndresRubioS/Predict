@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".register_activity"
+    android:background="#005c83">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="110dp"
+                app:srcCompat="@drawable/predict_logo" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/sombra_logo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center"
+                    android:hint="Name"
+                    android:inputType="textPersonName"
+                    tools:ignore="NotSibling"
+                    android:textColor="@color/edittext"
+                    android:textColorHint="@color/edittext"/>
+
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ems="10"
+                    android:layout_marginTop="10dp"
+                    android:inputType="textPassword"
+                    android:hint="Pasword"
+                    android:textColor="@color/edittext"
+                    android:textColorHint="@color/edittext"/>
+
+
+                <EditText
+                    android:id="@+id/editTextDate2"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ems="10"
+                    android:layout_marginTop="10dp"
+                    android:inputType="date"
+                    android:hint="Fecha de nacimiento"
+                    android:textColor="@color/edittext"
+                    android:textColorHint="@color/edittext"/>
+
+                <EditText
+                    android:id="@+id/editTextTextEmailAddress"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ems="10"
+                    android:layout_marginTop="10dp"
+                    android:inputType="textEmailAddress"
+                    android:hint="E-mail"
+                    android:textColor="@color/edittext"
+                    android:textColorHint="@color/edittext"/>
+
+                <EditText
+                    android:id="@+id/editTextTextPersonName"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ems="10"
+                    android:layout_marginTop="10dp"
+                    android:hint="DNI"
+                    android:textColor="@color/edittext"
+                    android:textColorHint="@color/edittext"/>
+
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ems="10"
+                    android:layout_marginTop="10dp"
+                    android:text="Aceptar terminos y condiciones"
+                    android:textColor="@color/white"/>
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#FF5722"
+                    android:text="Registrarse" />
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
