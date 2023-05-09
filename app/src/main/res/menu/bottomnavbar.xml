@@ -3,11 +3,18 @@
 
     <item android:title="Home"
         android:id="@+id/home"
-        android:icon="@drawable/ic_launcher_background"/>
-    <item android:title="Profile"
-        android:id="@+id/profile"
-        android:icon="@drawable/ic_launcher_background"/>
-    <item android:title="Settings"
-        android:id="@+id/settings"
-        android:icon="@drawable/ic_launcher_background"/>
+        android:icon="@drawable/construccion"/>
+    <item android:title="Noticias"
+        android:id="@+id/noticias"
+        android:icon="@drawable/periodico"/>
+    <item android:title="Predicts"
+        android:id="@+id/predict"
+        android:icon="@drawable/predict_logo"/>
+
+    <item android:title="Promos"
+        android:id="@+id/promos"
+        android:icon="@drawable/monedas"/>
+    <item android:title="Ranking"
+        android:id="@+id/ranking"
+        android:icon="@drawable/podio"/>
 </menu>
