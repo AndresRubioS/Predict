@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.predict.R
 import com.example.predict.databinding.ActivityBottomNavigationBinding
+import com.example.predict.ui.NavBar.Home.HomeFragment
 
 class BottomNavigationActivity : AppCompatActivity() {
     private lateinit var binding: ActivityBottomNavigationBinding
