@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.predict.R
 import com.example.predict.data.Match
 
-class HomeAdapter(private val matchList:List<Match>): RecyclerView.Adapter<HomeViewHolder>() {
+class MatchLiveAdapter(private val matchList:List<Match>): RecyclerView.Adapter<HomeViewHolder>() {
 
 
 

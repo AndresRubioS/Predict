@@ -5,9 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.predict.R
 import com.example.predict.data.MatchProvider
 import com.example.predict.databinding.FragmentHomeBinding
 
@@ -31,10 +29,11 @@ class HomeFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        initRecyclingView()
+        initRecyclingViewLiveMatch()
+        initRecyclingViewLastMatch()
     }
 
-    private fun initRecyclingView() {
+    private fun initRecyclingViewLiveMatch() {
         val manager =  LinearLayoutManager(context)
 
         //val decoration = DividerItemDecoration(context, manager.orientation)
@@ -42,7 +41,18 @@ class HomeFragment : Fragment() {
         val recyclerView = binding.rvMatchLive
 
         recyclerView.layoutManager = manager
-        recyclerView.adapter = HomeAdapter(MatchProvider.MatchList)
+        recyclerView.adapter = MatchLiveAdapter(MatchProvider.MatchList)
+        // recyclerView.addItemDecoration(decoration)
+    }
+    private fun initRecyclingViewLastMatch() {
+        val manager =  LinearLayoutManager(context)
+
+        //val decoration = DividerItemDecoration(context, manager.orientation)
+
+        val recyclerView = binding.rvLastMatch
+
+        recyclerView.layoutManager = manager
+        recyclerView.adapter = MatchLastAdapter(MatchProvider.MatchList)
         // recyclerView.addItemDecoration(decoration)
     }
 
