@@ -22,6 +22,6 @@ class MatchLastAdapter(private val matchList:List<Match>): RecyclerView.Adapter<
 
     }
 
-    override fun getItemCount(): Int = 5
+    override fun getItemCount(): Int = matchList.size
 
 }

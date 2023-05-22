@@ -1,0 +1,29 @@
+package com.example.predict.ui.NavBar.Home
+
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
+import com.example.predict.R
+import com.example.predict.data.Match
+import com.example.predict.data.Ranking
+import com.example.predict.ui.NavBar.ranking.RankingViewHolder
+
+class RankingAdapter(private val rankingList:List<Ranking>): RecyclerView.Adapter<RankingViewHolder>() {
+
+
+
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RankingViewHolder {
+        val layoutInflater = LayoutInflater.from(parent.context)
+        return RankingViewHolder(layoutInflater.inflate(R.layout.item_ranking, parent, false))
+    }
+
+    override fun onBindViewHolder(holder: RankingViewHolder, position: Int) {
+        val item = rankingList[position]
+        holder.render(item)
+
+    }
+
+    override fun getItemCount(): Int = rankingList.size
+
+}

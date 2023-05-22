@@ -19,6 +19,9 @@ class HomeViewHolder(view: View):  RecyclerView.ViewHolder(view) {
         Glide.with(binding.ivHomeTeam.context)
             .load(MatchModel.ImageHome)
             .into(binding.ivHomeTeam)
+        Glide.with(binding.ivVisitTeam.context)
+            .load(MatchModel.ImageVisit)
+            .into(binding.ivVisitTeam)
 
 
 
