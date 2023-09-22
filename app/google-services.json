@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "108637059500",
+    "project_id": "predict7-4beee",
+    "storage_bucket": "predict7-4beee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108637059500:android:426d3d6a1792b61eb3e209",
+        "android_client_info": {
+          "package_name": "com.example.predict"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108637059500-o471vmc4tk5jgqpd8bhuct669mn7ajik.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdtGSU-cImbmf9ftpRrYiAfZ1MKrO-2gk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "108637059500-o471vmc4tk5jgqpd8bhuct669mn7ajik.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

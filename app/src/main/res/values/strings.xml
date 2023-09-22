@@ -2,4 +2,5 @@
     <string name="app_name">Predict</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">PROFILEt</string>
+    <string name="prefs_file">com.predict.PREFERENCE_FILE_KEY</string>
 </resources>

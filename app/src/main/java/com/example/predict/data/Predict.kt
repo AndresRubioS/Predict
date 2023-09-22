@@ -8,7 +8,4 @@ data class Predict(
     var ScoreVisit: Int = 0,
     var ImageVisit: String = "",
 
-
-
-
     )

@@ -55,7 +55,7 @@ class PredictFragment : Fragment() {
 
         recyclerView.layoutManager = manager
         recyclerView.adapter = PredictAdapter(PredictProvider.PredictList)
-         recyclerView.addItemDecoration(decoration)
+        recyclerView.addItemDecoration(decoration)
         Log.d("prueba",PredictProvider.PredictList.toString())
 
     }

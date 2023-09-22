@@ -4,11 +4,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.predict.R
-import com.example.predict.data.Match
-import com.example.predict.data.Ranking
 import com.example.predict.ui.NavBar.ranking.RankingViewHolder
 
-class RankingAdapter(private val rankingList:List<Ranking>): RecyclerView.Adapter<RankingViewHolder>() {
+class RankingAdapter(private val rankingList: List<com.example.predict.data.model.User>): RecyclerView.Adapter<RankingViewHolder>() {
 
 
 
