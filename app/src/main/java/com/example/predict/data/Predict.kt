@@ -1,11 +1,12 @@
 package com.example.predict.data
 
 data class Predict(
-    var NameHome:String = "",
-    var ScoreHome:Int = 0,
-    var ImageHome:String = "",
-    var NameVisit:String = "",
-    var ScoreVisit: Int = 0,
-    var ImageVisit: String = "",
-
-    )
+    val active: Boolean,
+    val equipO_LOCAL_ID: String,
+    val equipO_VISITANTE_ID: String,
+    val fecha: String,
+    val goleS_EQUIPO_LOCAL: Int,
+    val goleS_EQUIPO_VISITANTE: Int,
+    val jornadA_ID: String,
+    val partidO_ID: String
+)
