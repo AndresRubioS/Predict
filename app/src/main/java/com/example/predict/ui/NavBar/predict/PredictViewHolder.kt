@@ -10,8 +10,8 @@ class PredictViewHolder(view: View):  RecyclerView.ViewHolder(view) {
     val binding = ItemPredictBinding.bind(view)
 
     fun render(MatchModel: Predict){
-        binding.tvNameHomeTeam.text = MatchModel.equipO_LOCAL_ID
-        binding.tvNameVisitTeam.text = MatchModel.equipO_VISITANTE_ID
+        binding.tvNameHomeTeam.text = MatchModel.nombrE_EQUIPO_LOCAL
+        binding.tvNameVisitTeam.text = MatchModel.nombrE_EQUIPO_VISITANTE
         binding.tvScoreHome.text = MatchModel.goleS_EQUIPO_LOCAL.toString()
         binding.tvScoreVisit.text = MatchModel.goleS_EQUIPO_VISITANTE.toString()
 
@@ -42,12 +42,12 @@ class PredictViewHolder(view: View):  RecyclerView.ViewHolder(view) {
                 binding.tvScoreVisit.setText(cero.toString())
             }
         }
-        //Glide.with(binding.ivHomeTeam.context)
-          //  .load(MatchModel.ImageHome)
-           // .into(binding.ivHomeTeam)
-        //Glide.with(binding.ivVisitTeam.context)
-            //.load(MatchModel.ImageVisit)
-          //  .into(binding.ivVisitTeam)
+        Glide.with(binding.ivHomeTeam.context)
+           .load(MatchModel.logO_EQUIPO_LOCAL)
+            .into(binding.ivHomeTeam)
+        Glide.with(binding.ivVisitTeam.context)
+            .load(MatchModel.logO_EQUIPO_VISITANTE)
+            .into(binding.ivVisitTeam)
 
 
 

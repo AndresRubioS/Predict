@@ -19,7 +19,7 @@ class RankingViewModel : ViewModel() {
     suspend fun executeGetRequest(): String {
         return withContext(Dispatchers.IO) {
             try {
-                val request = ApiRequestBuilder.createGetRequest("api/Usuario/All")
+                val request = ApiRequestBuilder.createGetRequest("Usuario/All")
 
                 val response = client.newCall(request).execute()
                 if (!response.isSuccessful) {

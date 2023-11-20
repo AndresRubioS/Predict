@@ -1,6 +1,7 @@
 package com.example.predict.data
 
 
+import android.util.Log
 import okhttp3.Request
 import okhttp3.RequestBody
 import okhttp3.MediaType
@@ -8,7 +9,7 @@ import okhttp3.MediaType.Companion.toMediaTypeOrNull
 
 
 object ApiRequestBuilder {
-    val baseUrl = "https://apphunters-001-site1.atempurl.com/"
+    val baseUrl = "https://apphunters-001-site1.atempurl.com/api/"
 
     fun createPostRequest(endpoint: String, jsonBody: String): Request {
 
@@ -23,6 +24,7 @@ object ApiRequestBuilder {
     }
     fun createGetRequest(endpoint: String): Request {
         val url = baseUrl + endpoint
+        Log.d("url", url)
         return Request.Builder()
             .url(url)
             .build()

@@ -51,6 +51,7 @@ class PredictFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(PredictViewModel::class.java)
         lifecycleScope.launch {
             try {
+                viewModel.executeGetRequestPartidos()
                 val response = viewModel.executeGetRequestListPredict()
                 initRecyclingViewPredict(response)
 

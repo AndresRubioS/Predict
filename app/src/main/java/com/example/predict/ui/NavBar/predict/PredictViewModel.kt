@@ -11,18 +11,24 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
 import java.io.IOException
+import java.util.concurrent.TimeUnit
 
 class PredictViewModel : ViewModel() {
 
-    private val client = OkHttpClient()
+
+    private val client = OkHttpClient.Builder()
+        .connectTimeout(10, TimeUnit.SECONDS)
+        .writeTimeout(10, TimeUnit.SECONDS)
+        .readTimeout(30, TimeUnit.SECONDS)
+        .build()
     private val gson = Gson()
     private var jornadaId: String? = null // Variable para almacenar el jornadA_ID
 
     suspend fun executeGetRequestJornada(): String {
         return withContext(Dispatchers.IO) {
             try {
-                val request = ApiRequestBuilder.createGetRequest("api/jornadas/actual")
-
+                val request = ApiRequestBuilder.createGetRequest("jornadas/actual")
+                //Log.d("requestPredict", request.toString())
                 val response = client.newCall(request).execute()
                 if (!response.isSuccessful) {
                     throw IOException("Error en la solicitud. Código de error: ${response.code}")
@@ -47,19 +53,23 @@ class PredictViewModel : ViewModel() {
 
     suspend fun executeGetRequestPartidos(): String {
         // Ejecutar el primer GET para obtener el jornadA_ID
-        executeGetRequestJornada()
+        //executeGetRequestJornada()
+        Log.d("requestPredict", "request.toString(")
 
         // Utilizar el jornadA_ID en el segundo GET
         return withContext(Dispatchers.IO) {
             try {
-                val request = ApiRequestBuilder.createGetRequest("api/partidos/$jornadaId") // Utiliza el jornadA_ID aquí
+                val request = ApiRequestBuilder.createGetRequest("partidos/Completos") // Utiliza el jornadA_ID aquí
                 Log.d("requestPredict", request.toString())
+                Log.d("requestPredict", "request.toString(")
                 val response = client.newCall(request).execute()
-                if (!response.isSuccessful) {
+                Log.d("requestPredict", response.toString())
+                if (response.isSuccessful) {
+                    return@withContext response.body?.string() ?: ""
+                } else {
                     throw IOException("Error en la solicitud. Código de error: ${response.code}")
-                }
 
-                return@withContext response.body?.string() ?: ""
+                }
             } catch (e: IOException) {
                 throw e
             }

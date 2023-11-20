@@ -4,166 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.NavBar.PromosFragment"
+    tools:context=".ui.NavBar.promos.PromosFragment"
     android:background="#005c83">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
-        <LinearLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_promos"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:orientation="horizontal"
-            android:background="@color/white"
-            >
+            android:layout_height="400dp">
 
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_weight="1"
-                android:src="@drawable/predict_logo" />
+        </androidx.recyclerview.widget.RecyclerView>
 
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="TextView"
-               />
-        </LinearLayout>
-
-        <LinearLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_categoria_adelanto"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:orientation="horizontal">
+            android:layout_height="200dp" >
 
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_weight="1"
-                android:src="@drawable/predict_logo"
-                android:background="@color/white"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="10dp"/>
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_weight="1"
-                android:src="@drawable/predict_logo"
-                android:background="@color/white"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="10dp"/>
-            <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_weight="1"
-                android:src="@drawable/predict_logo"
-                android:background="@color/white"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="10dp"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:orientation="horizontal">
+        </androidx.recyclerview.widget.RecyclerView>
 
-            <ImageView
-                android:id="@+id/imageView8"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_weight="1"
-                android:src="@drawable/predict_logo"
-                android:background="@color/white"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="10dp"/>
-            <ImageView
-                android:id="@+id/imageView9"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_weight="1"
-                android:src="@drawable/predict_logo"
-                android:background="@color/white"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="10dp"/>
-            <ImageView
-                android:id="@+id/imageView10"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_weight="1"
-                android:src="@drawable/predict_logo"
-                android:background="@color/white"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="10dp"/>
-        </LinearLayout>
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Mas categorias" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:orientation="horizontal"
-            android:background="@color/white">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                >
-
-                <Button
-                    android:id="@+id/button3"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:background="#FFEB3B"
-                    android:text="DEPORTES"
-                    android:textColor="@color/black"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:orientation="horizontal"
-            android:background="@color/white">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                >
-
-                <Button
-                    android:id="@+id/button4"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:background="#FFEB3B"
-                    android:text="DEPORTES"
-                    android:textColor="@color/black"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </LinearLayout>
     </LinearLayout>
+
 </FrameLayout>

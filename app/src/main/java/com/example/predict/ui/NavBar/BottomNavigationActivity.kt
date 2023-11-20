@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.predict.R
+import com.example.predict.data.model.Promos
 import com.example.predict.databinding.ActivityBottomNavigationBinding
+import com.example.predict.ui.NavBar.Categoria.CategoriaFragment
 import com.example.predict.ui.NavBar.Home.HomeFragment
 import com.example.predict.ui.NavBar.predict.PredictFragment
+import com.example.predict.ui.NavBar.promos.PromosFragment
 import com.example.predict.ui.NavBar.ranking.RankingFragment
 
 class BottomNavigationActivity : AppCompatActivity() {
